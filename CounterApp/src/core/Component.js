@@ -20,7 +20,7 @@ export default class Component {
   }
 
   // this updates status
-  setState() {
+  setState(newState) {
     // 컴포넌트의 상태를 변경
     this.state = newState;
     this.render();
@@ -32,9 +32,15 @@ export default class Component {
     // JSX 와 같이 해당 컴포넌트의 UI 를 정의하는 부분
   }
 
-  render(position) {
+  // renderAdjacent(position) {
+  //   // 실제 브라우저에 랜더링 하는 기능
+  //   this.$target.insertAdjacentHTML(position, this.template());
+  //   this.componentDidMount();
+  // }
+
+  render() {
     // 실제 브라우저에 랜더링 하는 기능
-    this.$target.insertAdjacentHTML(position, this.template());
+    this.$target.innerHTML = this.template();
     this.componentDidMount();
   }
 

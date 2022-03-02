@@ -2,6 +2,7 @@ export default class Component {
   $target;
   props;
   state;
+  // target will be the root Dom
   // this recieves target, props
   constructor($target, props) {
     this.$target = $target;
@@ -30,6 +31,7 @@ export default class Component {
   // As a change of state UI needs to be updated as well so call this.render() in template method
   template() {
     // JSX 와 같이 해당 컴포넌트의 UI 를 정의하는 부분
+    return ``;
   }
 
   // renderAdjacent(position) {
